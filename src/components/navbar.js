@@ -34,7 +34,10 @@ const Navbar = () => {
             <Box m={{ xs: 1, sm: 1, md: 0 }}>
               <img src={logo} width={60} height={60} alt="" />
             </Box>
-
+            <TextField id="outlined-basic" variant="outlined" placeholder="search in daraz" sx={{width: 100, marginTop:"1rem", backgroundColor:grey}}  />
+            <Box sx={{backgroundColor:"#F57208", width:"1rem", height:"3.2rem", marginTop:"1.3rem", display:"flex", alignItems:"center", justifyContent:"center" }}>
+                  <SearchIcon  />
+                </Box>
             <IconButton
               color="inherit"
               aria-label="open drawer"
@@ -48,11 +51,11 @@ const Navbar = () => {
 
           <Container
             className="navbarDesktop"
-            sx={{ p: 1, pl: 1 }}
+            sx={{ p: 1, pl: 3, position:"absolute", marginLeft:"2rem" }}
             maxWidth="lg"
           >
-            <Grid alignItems="center" container spacing={3}>
-              <Grid item md={2}>
+            <Grid alignItems="center" container spacing={3} >
+              <Grid item md={2} >
                 <img src={logo} width={200} height={60} alt="" />
               </Grid>
               <Grid
@@ -67,16 +70,17 @@ const Navbar = () => {
                   fontSize: "20px",
                   lineHeight: "22px",
                   color: "#FFFFFF",
+                
                 }}
                 xs={6}
               >
-                <TextField id="outlined-basic" variant="outlined" placeholder="search in daraz" sx={{width: 500, backgroundColor:grey}}  />
-                <Box sx={{backgroundColor:"#F57208", width:"5rem", display:"flex", alignItems:"center", justifyContent:"center" }}>
+                <TextField id="outlined-basic" variant="outlined" placeholder="search in daraz" sx={{width: 900,marginLeft:"4rem"}}  />
+                <Box sx={{backgroundColor:"#F57208", width:"7rem", display:"flex", alignItems:"center", justifyContent:"center" }}>
                   <SearchIcon  />
                 </Box>
                 
               </Grid>
-              <Grid item xs={2} sx={{color:"#000000",width:"2rem" }}>
+              <Grid item xs={2} sx={{color:"#000000",width:"2rem", }}>
               <ShoppingCartSharpIcon />
               </Grid>
               <Grid item md={2}>
@@ -86,7 +90,7 @@ const Navbar = () => {
           </Container>
         </Toolbar>
       </AppBar>
-      <Box component="nav">
+      <Box component="nav" sx={{paddingBottom:"7rem"}}>
         <Drawer
           variant="temporary"
           open={mobileOpen}
@@ -113,7 +117,7 @@ const Navbar = () => {
               >
 
 <ListItemButton component="a" href="#simple-list">
- <TextField id="outlined-basic" variant="outlined" sx={{width: 200}}  />
+ <TextField id="outlined-basic" variant="outlined" sx={{width: 400, background:"#ffffff"}}  />
   <SearchIcon  />
 </ListItemButton>
                 <Button
@@ -131,7 +135,7 @@ const Navbar = () => {
                 >
                   <Box
                     sx={{
-                      backgroundColor: "#1D1D1D",
+                      backgroundColor: "transparent",
                       width: 3,
                       height: 58,
                       transform: "rotate(50deg)",
